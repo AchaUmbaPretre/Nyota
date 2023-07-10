@@ -10,9 +10,9 @@ let xmark = document.querySelector('.xmark');
         navUl.classList.remove("navToggle")
     })
 
-var project1 = setInterval(projectDone1, 200);
-var project2 = setInterval(projectDone2, 200);
-var project3 = setInterval(projectDone3, 200);
+var project1 = setInterval(projectDone1, 100);
+var project2 = setInterval(projectDone2, 100);
+var project3 = setInterval(projectDone3, 100);
 let count1 = 1;
 let count2 = 1;
 let count3 = 1;
@@ -53,3 +53,23 @@ allCross.forEach(element=>{
         console.log('bonjour')
     })
 })
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+})
+sr.reveal(`.slider-h1`, {origin:'right'})
+sr.reveal(`.slider-btn`, {origin:'bottom'})
+sr.reveal(`.slider-desc`, {origin:'left'})
+sr.reveal(`.apropos-right`, {origin:'right'})
+sr.reveal(`.experience-row`, {delay: 500, origin: 'bottom', interval: 100})
+sr.reveal(`.apropos-left`, {origin:'left'})
+sr.reveal(`.apropos-right`, {origin:'right'})
+sr.reveal(`.counter-rows`, {delay: 800,origin:'top',origin: 'bottom', interval: 100})
+sr.reveal(`.question-rows`, {delay: 500, origin: 'bottom', interval: 100})
+sr.reveal(`.actualite-rows`, {delay: 500, origin: 'bottom', interval: 100})
+sr.reveal(`.contact-left`, {origin:'left'})
+sr.reveal(`.contact-right`, {origin:'right'})
+sr.reveal(`.footer`, {origin:'bottom'})

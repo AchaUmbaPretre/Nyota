@@ -1,0 +1,86 @@
+
+.sport-container{ 
+    position: relative;
+    height: calc(70vh - 60px);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.849)), url('/img/sport1.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+.sport-h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3;
+    color: #fff;
+}
+.sport-rows{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sport-row{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    width: 900px;
+    top:-80px
+}
+.sport-img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 400px;
+}
+.sport-row-text{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.desc-sport{
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media screen and (max-width:992px){
+    
+}
+
+@media screen and (max-width: 768px){
+    .sport-row{
+        width: 700px;
+    }
+
+}
+@media screen and (max-width:568px){
+    .sport-row{
+        width: 500px;
+    }
+}
+@media screen and (max-width:414px){
+    .sport-h1{
+        font-size: 1.3rem;
+    }
+    .sport-row{
+        width: 385px;
+    }
+}
+
+@media screen and (max-width:390px){
+    .sport-row{
+        width: 350px;
+    }
+    
+}
+
+@media screen and (max-width:375px){
+
+}
