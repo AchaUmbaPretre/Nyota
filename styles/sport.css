@@ -7,6 +7,7 @@
     background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -17,6 +18,13 @@
     font-size: 2rem;
     letter-spacing: 3;
     color: #fff;
+}
+.sport-retour{
+    padding: 8px 10px;
+    background: orangered;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 .sport-rows{
     width: 100%;
@@ -49,6 +57,11 @@
     line-height: 1.6;
     text-align: justify;
 }
+.sport-center-img{
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+}
 
 @media screen and (max-width:992px){
     
@@ -69,6 +82,9 @@
     .sport-h1{
         font-size: 1.3rem;
     }
+    .sport-container{
+        height: calc(60vh - 60px);
+    }
     .sport-row{
         width: 385px;
     }
@@ -76,7 +92,7 @@
 
 @media screen and (max-width:390px){
     .sport-row{
-        width: 350px;
+        width: 340px;
     }
     
 }

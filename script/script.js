@@ -46,11 +46,10 @@ function projectDone3(){
 
 
 const allCross = document.querySelectorAll('.question-row');
-
+const icons = document.querySelectorAll('.icons-plus')
 allCross.forEach(element=>{
     element.addEventListener('click', ()=>{
         element.classList.toggle('active')
-        console.log('bonjour')
     })
 })
 
@@ -67,9 +66,19 @@ sr.reveal(`.apropos-right`, {origin:'right'})
 sr.reveal(`.experience-row`, {delay: 500, origin: 'bottom', interval: 100})
 sr.reveal(`.apropos-left`, {origin:'left'})
 sr.reveal(`.apropos-right`, {origin:'right'})
-sr.reveal(`.counter-rows`, {delay: 800,origin:'top',origin: 'bottom', interval: 100})
+sr.reveal(`.count1`, {delay: 500,origin:'top',origin: 'bottom', interval: 100})
+sr.reveal(`.count2`, {delay: 800,origin:'top',origin: 'bottom', interval: 100})
+sr.reveal(`.count3`, {delay: 900,origin:'top',origin: 'bottom', interval: 100})
+sr.reveal(`.count4`, {delay: 1000,origin:'top',origin: 'bottom', interval: 100})
+/* sr.reveal(`.counter-rows`, {delay: 800,origin:'top',origin: 'bottom', interval: 100}) */
 sr.reveal(`.question-rows`, {delay: 500, origin: 'bottom', interval: 100})
 sr.reveal(`.actualite-rows`, {delay: 500, origin: 'bottom', interval: 100})
 sr.reveal(`.contact-left`, {origin:'left'})
 sr.reveal(`.contact-right`, {origin:'right'})
 sr.reveal(`.footer`, {origin:'bottom'})
+sr.reveal(`.sport-img`, {origin:'left'})
+sr.reveal(`#number2`, {origin:'left'})
+number2
+
+sr.reveal(`.desc-sport`, {origin:'right'})
+sr.reveal(`.sport-center-img`, {origin:'left'})
