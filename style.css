@@ -1152,6 +1152,16 @@ textarea:focus{
     .apropos{
         margin: 0 0 50px 0;
     }
+    .apropos-left{
+        position: relative;
+        flex: 1.1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .apropos-img-left1{
+        display: none;
+    }
     .counter{
         height: 80vh;
     }
