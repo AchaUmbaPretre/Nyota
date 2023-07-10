@@ -120,7 +120,7 @@ body{
 }
 .slider{
     position: relative;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
     background: linear-gradient(
         rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.849)), url('./img/slider2.jpg') no-repeat;
     background-position: center;
@@ -323,7 +323,7 @@ body{
 }
 .apropos-left{
     position: relative;
-    flex: 1;
+    flex: 1.1;
     display: flex;
     gap: 5px;
 }
@@ -342,6 +342,7 @@ body{
     flex: 1;
     width: 100%;
     object-fit: cover;
+    border-bottom-left-radius: 10px;
 }
 .apropos-left-right{
     display: flex;
@@ -390,8 +391,9 @@ body{
     overflow: hidden;
 }
 .counter-rows{
-    width: 200%;
+    width: 190%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .counter-row{
@@ -419,6 +421,12 @@ body{
     font-family: 'Anton', sans-serif;
     font-size: 3.5rem;
     font-weight: bold;
+    color: #f2f2f2;
+    letter-spacing: 1.6;
+}
+.counter-title{
+    font-family: 'Anton', sans-serif;
+    font-size: 2.8rem;
     color: #f2f2f2;
     letter-spacing: 1.6;
 }
@@ -956,6 +964,9 @@ textarea:focus{
     .experience-bars{
         width: 15%;
     }
+    .counter-rows{
+        width: 950px;
+    }
     .actu-h2{
         text-align: center;
     }
@@ -994,11 +1005,16 @@ textarea:focus{
         text-align: center;
         color:  rgba(10, 10, 51);
     }
+    .counter{
+        height: 140%;
+    }
     .counter-rows{
         width: 150%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
+
     .contact-rows{
         width: 100%;
         margin-top: 100px;
@@ -1212,14 +1228,14 @@ textarea:focus{
     .slider{
         height: calc(50vh - 60px);
     }
+    .counter{
+        height: 110vh;
+    }
     .experience-container{
         width: 340px;
     }
     .experience-title{
         width: 340px;
-    }
-    .counter{
-        height: 100vh;
     }
     .footer-rows{
         width: 340px;
