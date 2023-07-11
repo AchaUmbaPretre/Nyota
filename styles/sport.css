@@ -83,10 +83,18 @@
         font-size: 1.3rem;
     }
     .sport-container{
-        height: calc(60vh - 60px);
+        height: calc(50vh - 60px);
     }
     .sport-row{
-        width: 385px;
+        position: relative;
+        width: 370px;
+        overflow: hidden;
+    }
+    .sport-img{
+        height: 300px;
+    }
+    .sport-center-img{
+        height: 250px;
     }
 }
 

@@ -1113,7 +1113,7 @@ textarea:focus{
         width: 380px;
     }
     .slider{
-        height: calc(40vh - 50px);
+        height: calc(50vh - 50px);
     }
     .slider-rows{
         width: 200px;
@@ -1138,10 +1138,12 @@ textarea:focus{
         margin: 50px 0;
     }
     .experience-container{
+        position: relative;
         width: 385px;
+        overflow: hidden;
     }
     .experience-title{
-        width: 400px;
+        width: 350px;
     }
     .experience-h1{
         font-size: 1rem;
@@ -1221,7 +1223,15 @@ textarea:focus{
         width: 360px;
     }
     .experience-container{
-        width: 360px;
+        position: relative;
+        width: 350px;
+        overflow: hidden;
+    }
+    .experience-title{
+        width: 325px;
+    }
+    .counter{
+        height: 100vh;
     }
     .footer-rows{
         width: 360px;
@@ -1236,7 +1246,7 @@ textarea:focus{
         width: 340px;
     }
     .slider{
-        height: calc(50vh - 60px);
+        height: calc(60vh - 60px);
     }
     .counter{
         height: 110vh;
