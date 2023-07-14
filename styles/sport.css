@@ -20,10 +20,10 @@
     color: #fff;
 }
 .sport-retour{
-    padding: 8px 10px;
+    padding: 10px;
     background: orangered;
     color: #fff;
-    margin-top: 20px;
+    margin: 20px;
     border-radius: 5px;
 }
 .sport-rows{
@@ -62,6 +62,8 @@
     object-fit: cover;
     height: 400px;
 }
+
+
 
 @media screen and (max-width:992px){
     

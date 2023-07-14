@@ -10,38 +10,29 @@ let xmark = document.querySelector('.xmark');
         navUl.classList.remove("navToggle")
     })
 
-var project1 = setInterval(projectDone1, 100);
-var project2 = setInterval(projectDone2, 100);
-var project3 = setInterval(projectDone3, 100);
-let count1 = 1;
-let count2 = 1;
-let count3 = 1;
+//counter
+let nums =  document.querySelectorAll('.counter .counter-h1');
+let statsCounter = document.querySelector('.counter');
+let started = false;
 
-function projectDone1(){
-    count1++;
-
-    document.querySelector('#number1').innerHTML = count1;
-    if(count1 === 45){
-        clearInterval(project1)
+window.onscroll = function(){
+    if(window.scrollY >= statsCounter.offsetTop){
+        if(!started){
+            nums.forEach((num)=> startCount(num));
+        }
+        started = true;
     }
-}
+};
 
-function projectDone2(){
-    count2++;
+function startCount(el){
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+        el.textContent++;
 
-    document.querySelector('#number2').innerHTML = count2;
-    if(count2 === 35){
-        clearInterval(project2)
-    }
-}
-
-function projectDone3(){
-    count3++;
-
-    document.querySelector('#number3').innerHTML = count3;
-    if(count3 === 7){
-        clearInterval(project3)
-    }
+        if(el.textContent == goal) {
+            clearInterval(count);
+        }
+    }, 2000 / goal);
 }
 
 
@@ -53,6 +44,7 @@ allCross.forEach(element=>{
     })
 })
 
+//ScrollReveal
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
@@ -77,8 +69,19 @@ sr.reveal(`.contact-left`, {origin:'left'})
 sr.reveal(`.contact-right`, {origin:'right'})
 sr.reveal(`.footer`, {origin:'bottom'})
 sr.reveal(`.sport-img`, {origin:'left'})
-sr.reveal(`#number2`, {origin:'left'})
-number2
-
 sr.reveal(`.desc-sport`, {origin:'right'})
 sr.reveal(`.sport-center-img`, {origin:'left'})
+
+//ScrollUp
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    if(this.scrollY >= 500) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+
+function scrollToTop(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+}
