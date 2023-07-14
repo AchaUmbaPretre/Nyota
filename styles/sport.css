@@ -3,7 +3,7 @@
     position: relative;
     height: calc(70vh - 60px);
     background: linear-gradient(
-        rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.849)), url('/img/sport1.jpeg') no-repeat;
+        rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.849)), url('/img/sport1\ \(2\).jpeg') no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
