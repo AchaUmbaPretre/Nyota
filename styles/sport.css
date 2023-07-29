@@ -48,6 +48,10 @@
     border-top-right-radius: 10px;
     height: 400px;
 }
+.sport-img2{
+    width: 100%;
+    object-fit: cover;
+}
 .sport-row-text{
     display: flex;
     flex-direction: column;
