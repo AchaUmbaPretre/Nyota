@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css">
     <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("tYX9g0nQroGqMMv5F");
+        })();
+    </script>
 </head>
 <body>
     <div class="topbar">
@@ -65,6 +73,14 @@
                 <a href="" class="slider-btn">Savoir plus</a>
             </div>
         </div>
+    </section>
+    <section class="bande-defilante">
+        <a href="https://www.kiwix.fr"><!-- Lien de redirection du bandeau -->
+            <div class="Conteneur"><div class="messagedefilant">
+                <b>Félicitations à nos élèves pour leur excellente prestation aux examens TENASOSP avec un taux de réussite de 100%.</b><i class="bande-i">&nbsp;Spéciale mention à notre lauréate <b>Mlle MUENGULA MBUAYA</b>, notre lauréate avec 87%.</i>&nbsp;&nbsp;
+            </div>
+        </div>
+        </a>
     </section>
     <section class="experiences">
         <div class="experience-container">
@@ -495,6 +511,18 @@
             </div>
         </div>
     </section>
+    <section class="localisation">
+        <div class="experience-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.299565499056!2d15.260779973794543!3d-4.354801646676941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a31a8fff4e22d%3A0xdb60a13da3b77022!2sC.S.%20Nyota!5e0!3m2!1sfr!2scd!4v1689754420121!5m2!1sfr!2scd" 
+                width="300%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
     <section class="contact" id="contact">
        <div class="experience-container">
             <div class="experience-title">
@@ -505,12 +533,12 @@
                 <div class="contact-left">
                     <form action="" class="formulaire">
                         <div class="form-controle">
-                            <input type="text" class="form-input" placeholder="Entrer votre nom">
-                            <input type="text" class="form-input" placeholder="Entrer votre email">
+                            <input type="text" id="name" class="form-input" placeholder="Entrer votre nom">
+                            <input type="text" id="email" class="form-input" placeholder="Entrer votre email">
                         </div>
-                        <input type="text" class="form-input" placeholder="Enter subject">
-                        <textarea name="" id="" rows="10" placeholder="Message...."></textarea>
-                        <button class="btn-contact">Envoyer le message</button>
+                        <input type="text" id="objectif" class="form-input" placeholder="Enter subject">
+                        <textarea name="" id="message" rows="10" placeholder="Message...."></textarea>
+                        <button onclick={sendMail()} class="btn-contact">Envoyer le message</button>
                     </form>
                 </div>
                 <div class="contact-right">
@@ -533,7 +561,7 @@
                     <div class="contact-right-rows">
                         <i class="fa-regular fa-envelope icons-contact"></i>
                         <div class="contact-right-row">
-                            <span class="contact-desc">nyotacsn@gmail.com <br> <a href="" class="contact-desc">https://cs-nyota.org</a></span>
+                            <span class="contact-desc"><a href="https:nyotacsn@gmail.com" class="contact-desc">nyotacsn@gmail.com </a><br> <a href="https://direction@cs-nyota.org" class="contact-desc">https://direction@cs-nyota.org</a></span>
                             <span class="contact-desc2">Envoyez-nous votre requête à tout moment !</span>
                         </div>
                     </div>
@@ -607,7 +635,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p class="footer-copy">&#169 LOGfiinSmort. tous droits réservés</p>
+            <p class="footer-copy">&#169 LoginSmort. tous droits réservés</p>
         </div>
     </footer>
     <a href="" class="scrollup" id="scroll-up" onclick='scrollToTop();'>
@@ -615,5 +643,32 @@
     </a>
     <script src="./script/scrollreveal.min.js"></script>
     <script src="./script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        function sendMail(){
+
+            var params = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                objectif: document.getElementById('objectif').value,
+                message: document.getElementById('message').value
+            }
+            console.log(params)
+            emailjs.send("service_kymooqf", "template_iveurhc", params).then(function(res){
+                alert('message envoyé avec success' + res.status)
+            });
+        }
+
+            function marqueelike() {
+        $('.messagedefilant').each(function() {
+            var texte = $(this).html();
+            $(this).html('<div><span>' + texte + '</span><span>' + texte + '</span></div>');
+        });
+        }
+        
+        $(window).on('load', function() {
+        marqueelike();
+        });
+    </script>
 </body>
 </html>
