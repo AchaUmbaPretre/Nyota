@@ -27,6 +27,7 @@ a{
     text-decoration: none;
     color: gray;
 }
+
 body{
     background: #f1f1f1;
     --Typo:'Oswald', sans-serif;
@@ -38,6 +39,7 @@ body{
     --Vitesse: 20s;
     --Couleur_de_fond: rgba(233, 75, 18, 0.938);
 }
+
 .topbar{
     height: 30px;
     background: rgba(233, 75, 18, 0.836);
@@ -526,6 +528,11 @@ b{ font-weight: var(--Typo_Bold) }
     width: 100%;
     margin-top: 100px;
     gap: 30px;
+}
+.vision-img{
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
 }
 .questions{
     width: 100%;
