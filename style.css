@@ -380,8 +380,8 @@ b{ font-weight: var(--Typo_Bold) }
 }
 .experience-icon{
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     background: rgba(133, 130, 130, 0.082);
     display: flex;
@@ -583,22 +583,54 @@ b{ font-weight: var(--Typo_Bold) }
     flex-direction: column;
     gap: 10px;
 }
-.visible-pannel{
+.visible-pannel {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background: linear-gradient(orangered,rgb(172, 48, 2));
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.100);
-    border: 1px solid rgba(158, 154, 154, 0.548);
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, orangered, #aa2e00);
+    border-radius: 12px;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.3s ease;
+    position: relative;
     z-index: 10;
     cursor: pointer;
+    overflow: hidden;
 }
-.visible-pannel:hover{
-    background: rgb(126, 41, 13);
+
+.visible-pannel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
 }
+
+.visible-pannel:hover::before {
+    opacity: 1;
+}
+
+.visible-pannel:hover {
+    background: linear-gradient(135deg, #7d2a12, #aa2e00);
+    box-shadow: 0 12px 30px rgba(255, 69, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+.visible-pannel > * {
+    position: relative;
+    z-index: 1;
+}
+
 .question-h2{
     font-family: 'Anton', sans-serif;
     font-weight: 200;
