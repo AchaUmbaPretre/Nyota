@@ -219,14 +219,14 @@ b{ font-weight: var(--Typo_Bold) }
 
 .Conteneur{
     position: relative;
-      width: 100%;
-      height: 10%;
-      display:flex;
-      flex-direction:column;
+    width: 100%;
+    height: 10%;
+    display:flex;
+    flex-direction:column;
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
-      background-color: var(--Couleur_de_fond); 
+    background-color: var(--Couleur_de_fond); 
 }
 .messagedefilant div {
   position: absolute;
