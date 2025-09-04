@@ -170,7 +170,7 @@ body{
     border-radius: 5px;
     padding: 8px 15px;
     color: #fff;
-    transition: .5s;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
     letter-spacing: 1.5;
     font-size: .9rem;
 }
@@ -195,6 +195,7 @@ body{
 .slider-btn:hover{
     background: orangered;
     color: #fff;
+    transform: translateY(-2px);
 }
 
 .messagedefilant {
