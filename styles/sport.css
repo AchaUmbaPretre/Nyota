@@ -61,10 +61,15 @@
     line-height: 1.6;
     text-align: justify;
 }
+.resultat_rows{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
 .sport-center-img{
     width: 100%;
     object-fit: cover;
-    height: 400px;
+    height: 500px;
 }
 
 
@@ -80,9 +85,21 @@
 
 }
 @media screen and (max-width:568px){
+    .sport-h1{
+        font-family: 'Anton', sans-serif;
+        font-size: 1rem;
+        letter-spacing: 3;
+        color: #fff;
+    }
     .sport-row{
         width: 500px;
     }
+    .resultat_rows{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+
+}
 }
 @media screen and (max-width:414px){
     .sport-h1{

@@ -1195,6 +1195,10 @@ textarea:focus{
         flex-direction: column;
     }
 
+    .vision-img{
+        height: 100%;
+    }
+
     .actualite{
         margin: 0 0 100px 0;
     }
